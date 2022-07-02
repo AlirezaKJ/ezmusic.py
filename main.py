@@ -16,11 +16,8 @@ clear()
 def getaudio(link,name):
 	audio = YouTube(link)
 	streams = audio.streams.get_audio_only()
-	# print(streams)
 	streams.download("Music")
 	os.rename(f"Music/{name}.mp4",f"Music/{name}.mp3")
-	# video = VideoFileClip(os.path.join(f"Music/{name}.mp4"))
-	# video.audio.write_audiofile(os.path.join("Music/{name}.mp3"))
 
 	print("Download Completed File Saved In Music Folder Next To This File")
 
